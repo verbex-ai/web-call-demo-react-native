@@ -1,8 +1,6 @@
-import { registerRootComponent } from 'expo';
+// LiveKit's WebRTC globals must be registered before any other module touches
+// `navigator.mediaDevices` or constructs a Room — so this import stays first and
+// above `expo-router/entry`, which is what boots the app.
+import "./src/setup/livekitSetup";
 
-import App from './App';
-
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+import "expo-router/entry";

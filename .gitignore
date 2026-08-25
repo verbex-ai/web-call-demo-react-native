@@ -39,3 +39,10 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# local secrets — this file holds the Verbex API key
+.env
+.icon-backup/
+
+# release signing — keystore + passwords, never commit
+credentials/

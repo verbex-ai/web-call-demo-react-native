@@ -1,0 +1,41 @@
+{
+  "cli": {
+    "version": ">= 12.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": { "buildType": "apk" },
+      "env": {
+        "EXPO_PUBLIC_VERBEX_API_BASE": "https://api.verbex.ai",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_EN": "",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_BN": ""
+      }
+    },
+
+    "preview": {
+      "distribution": "internal",
+      "android": { "buildType": "apk" },
+      "env": {
+        "EXPO_PUBLIC_VERBEX_API_BASE": "https://api.verbex.ai",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_EN": "",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_BN": "",
+        "EXPO_PUBLIC_TOKEN_ENDPOINT": ""
+      }
+    },
+
+    "production": {
+      "android": { "buildType": "app-bundle" },
+      "env": {
+        "EXPO_PUBLIC_VERBEX_API_BASE": "https://api.verbex.ai",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_EN": "",
+        "EXPO_PUBLIC_VERBEX_AGENT_ID_BN": "",
+        "EXPO_PUBLIC_TOKEN_ENDPOINT": ""
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
